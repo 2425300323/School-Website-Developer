@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Kwame Nkrumah Memorial School - Admissions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/images/img-20260206-wa0010-3.jpg" alt="Great Kwame Nkrumah Memorial School Logo" class="logo-img">
+                <div class="school-name">
+                    <h1>Great Kwame Nkrumah</h1>
+                    <p>Memorial School</p>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#admissions" class="nav-link">Admissions</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Excellence</h2>
+            <p class="motto">RIGHTEOUSNESS AND TRUTH</p>
+            <p class="tagline">Nurturing Young Minds, Shaping the Future Star</p>
+            <a href="#admissions" class="cta-button">Start Your Journey</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-card vision">
+                <h3>Our Vision</h3>
+                <p>Nurturing young minds, shaping the future star</p>
+            </div>
+            <div class="about-card mission">
+                <h3>Our Mission</h3>
+                <p>To provide a supportive and inclusive learning environment that fosters academic excellence, creativity, and social growth, empowering students to become confident, curious, and compassionate individuals.</p>
+            </div>
+            <div class="about-card location">
+                <h3>Location</h3>
+                <p>Korle Gonno<br>Close to Dr. F. N. Nanka Bruce (JHS)<br>Accra, Ghana - West Africa</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
+        <h2>Admission Programs</h2>
+        <div class="programs-container">
+            <div class="program-card">
+                <div class="program-icon">👶</div>
+                <h3>Nursery</h3>
+                <p>Early childhood education focusing on foundational skills and social development</p>
+                <p class="program-age">Ages 3-5</p>
+            </div>
+            <div class="program-card">
+                <div class="program-icon">📚</div>
+                <h3>Primary</h3>
+                <p>Comprehensive primary education with emphasis on academics and character development</p>
+                <p class="program-age">Ages 6-11</p>
+            </div>
+            <div class="program-card">
+                <div class="program-icon">🎓</div>
+                <h3>Junior High School</h3>
+                <p>Advanced curriculum preparing students for secondary education and beyond</p>
+                <p class="program-age">Ages 12-14</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="admissions">
+        <h2>Online Admission Form</h2>
+        <div class="form-container">
+            <form id="admissionForm" class="admission-form">
+                <!-- Student Information -->
+                <fieldset>
+                    <legend>Student Information</legend>
+                    
+                    <div class="form-group">
+                        <label for="studentName">Full Name *</label>
+                        <input type="text" id="studentName" name="studentName" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dateOfBirth">Date of Birth *</label>
+                            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender *</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="program">Program Level *</label>
+                        <select id="program" name="program" required onchange="updateFees()">
+                            <option value="">Select Program</option>
+                            <option value="nursery">Nursery</option>
+                            <option value="primary">Primary</option>
+                            <option value="jhs">Junior High School</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentId">Student ID (if applicable)</label>
+                        <input type="text" id="studentId" name="studentId">
+                    </div>
+                </fieldset>
+
+                <!-- Parent/Guardian Information -->
+                <fieldset>
+                    <legend>Parent/Guardian Information</legend>
+                    
+                    <div class="form-group">
+                        <label for="parentName">Parent/Guardian Name *</label>
+                        <input type="text" id="parentName" name="parentName" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Residential Address *</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- Academic Information -->
+                <fieldset>
+                    <legend>Academic Information</legend>
+                    
+                    <div class="form-group">
+                        <label for="previousSchool">Previous School (if any)</label>
+                        <input type="text" id="previousSchool" name="previousSchool">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reason">Reason for Application *</label>
+                        <textarea id="reason" name="reason" rows="3" required placeholder="Tell us why your child would be a great fit for our school..."></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- Fees Section -->
+                <fieldset>
+                    <legend>Admission Fee Payment</legend>
+                    
+                    <div class="fee-display">
+                        <p>Selected Program: <strong id="programDisplay">Select a program</strong></p>
+                        <p>Admission Fee: <strong id="feeDisplay">GHS 0.00</strong></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paymentMethod">Payment Method *</label>
+                        <select id="paymentMethod" name="paymentMethod" required>
+                            <option value="">Select Payment Method</option>
+                            <option value="mtn">MTN Mobile Money</option>
+                            <option value="vodafone">Vodafone Cash</option>
+                            <option value="airtel">Airtel Money</option>
+                            <option value="bank">Bank Transfer</option>
+                            <option value="card">Credit/Debit Card</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="mtnDetails" style="display: none;">
+                        <label for="mtnNumber">MTN Mobile Number *</label>
+                        <input type="tel" id="mtnNumber" name="mtnNumber" placeholder="024-xxx-xxxx">
+                    </div>
+
+                    <div class="form-group" id="cardDetails" style="display: none;">
+                        <label for="cardNumber">Card Number *</label>
+                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiryDate">Expiry Date *</label>
+                                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV *</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Terms and Conditions -->
+                <fieldset>
+                    <legend>Agreement</legend>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the school's terms and conditions and confirm that all information provided is accurate.</label>
+                    </div>
+                </fieldset>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-button">Complete Admission & Process Payment</button>
+                <p class="form-note">* Required fields</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Address</h3>
+                    <p>P.O. Box 502<br>Mamprobi, Accra<br>Ghana - West Africa<br><br>Located at: Korle Gonno<br>Close to Dr. F. N. Nanka Bruce (JHS)</p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>Phone Numbers</h3>
+                    <p><a href="tel:030-266-9452">030-266-9452</a><br><a href="tel:024-479-1664">024-479-1664</a></p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p><a href="mailto:NanaYawNkrumahJnr@yahoo.com">NanaYawNkrumahJnr@yahoo.com</a></p>
+                </div>
+            </div>
+
+            <div class="quick-contact-form">
+                <h3>Quick Inquiry</h3>
+                <form id="quickForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Great Kwame Nkrumah Memorial School. All rights reserved.</p>
+        <p>Motto: Righteousness and Truth</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
